@@ -1,0 +1,100 @@
+\documentclass{llncs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title{Effects}
+\titlerunning{Effects}
+\author{Oleg Kiselyov \and Amr Sabry}
+\authorrunning{Kiselyov and Sabry}
+\institute{? \\
+\email{...@...}
+\and
+...}
+\maketitle
+
+%% Submission deadline Oct. 2 
+%% 15 pages LNCS style 
+
+\begin{abstract}
+
+\keywords{}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+In most programming languages, the type
+$\textsf{int} \rightarrow \textsf{int}$ does \emph{not} denote
+functions that map integers to integers. Rather, the type would
+typically denote functions that accept integers and then \emph{may},
+after performing any of a variety of computational actions, return an
+integer. Possible intermediate actions performed by the function
+evaluation may include:
+\begin{itemize}
+\item reading and updating external memory locations, environment
+  parameters, local or remote file systems or databases, etc;
+\item communicating with a user or another local or remote process;
+\item suspending the computation for a certain period of time or until
+  a certain outside condition happens;
+\item resuming other suspended computations;
+\item loading, compiling, and executing some other computation;
+\item using reflection to examine and perhaps modify the function's
+  machine representation;
+\item producing multiple answers by arranging for one $\textsf{int}$
+  to be returned now and subsequent answers to be returned when the
+  method is called again (with the same parameters);
+\item checkpointing the entire state to a log, which can be examined
+  and resumed later;
+\item failing due to any of a number of errors and runtime exceptions;
+\item consuming half of the battery life of Phil Wadler's laptop and
+  generating enough heat to keep him warm on a cold winter night in
+  Scotland.
+\end{itemize}
+Although Phil did not put it this way, we suspect he may agree that
+programming in such languages would be akin to taking, at the same
+time, several drugs whose side effects are not even declared on their
+labels. If taking one unlabeled drug is dangerous then taking multiple
+unlabeled drugs with no possible way of understanding the possible
+interactions among their side effects is even more dangerous.
+
+The fundamental question we ask then is how to understand, manage, and
+control the possible interactions among side effects of computations.
+Ideally the various side effects of individual computations could be
+described without reference to other computations and their effects
+and such computations could be composed in a modular and extensible
+way. The bulk of the paper will review two approaches based on
+extensible interpreters~\cite{cartwright-extensible} and monad
+transformers~\cite{liang-interpreter} and their relationship.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extensible Interpreters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Monad Transformers}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extensible Effects}
+
+Monad transformers are tagless-final dual of the Freer Monad, which is
+an initial encoding
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+Connections to other papers by Phil:  
+\begin{itemize}
+  \item Combining monads
+  \item Monads and composable continuations
+  \item Idioms are oblivious, arrows are meticulous, monads are promiscuous
+  \item Monadic constraint programming
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{acm}
+\bibliography{exteff}
+\end{document}
+
+
+

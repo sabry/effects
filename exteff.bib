@@ -1,0 +1,510 @@
+@STRING{proc_popl_1		= "{POPL} '" }
+STRING{proc_popl_2		= ": Conference Record of the Annual {ACM} Symposium on Principles of Programming Languages" }
+@STRING{proc_popl_2		= "" }
+@STRING{pub_acm			= "{ACM} {P}ress" }
+STRING{pub_acm_addr		= "{N}ew {Y}ork" }
+@STRING{pub_acm_addr		= "" }
+@STRING{pub_sv			= "Springer" }
+STRING{pub_sv_addr		= "Berlin" }
+@STRING{pub_sv_addr		= "" }
+@STRING{j_jfp			= "J. Functional Programming" }
+@STRING{proc_icfp_1		= "{ICFP} '" }
+@STRING{proc_icfp_2		= "" }
+STRING{proc_icfp_2		= ": Proceedings of the {ACM} International Conference on Functional Programming" }
+
+@InProceedings{	liang-interpreter,
+  author	= {Sheng Liang and Paul Hudak and Mark Jones},
+  title		= "Monad Transformers and Modular Interpreters",
+  pages		= "333--343",
+  crossref	= "popl1995",
+  abstract	= "We show how a set of {\it building blocks\/} can be
+                  used to construct programming language interpreters,
+                  and present implementations of such building blocks
+                  capable of supporting many commonly known features,
+                  including simple expressions, three different
+                  function call mechanisms (call-by-name,
+                  call-by-value and lazy evaluation), references and
+                  assignment, nondeterminism, first-class
+                  continuations, and program tracing. The underlying
+                  mechanism of our system is {\it monad
+                  transformers\/}, a simple form of abstraction for
+                  introducing a wide range of computational behaviors,
+                  such as state, I/O, continuations, and
+                  exceptions. Our work is significant in the following
+                  respects. First, we have succeeded in designing a
+                  fully modular interpreter based on monad
+                  transformers that incudes features missing from
+                  Steele's, Espinosa's, and Wadler's earlier
+                  efforts. Second, we have found new ways to lift
+                  monad operations through monad transformers, in
+                  particular difficult cases not achieved in Moggi's
+                  original work. Third, we have demonstrated that
+                  interactions between features are reflected in
+                  liftings and that semantics can be changed by
+                  reordering monad transformers. Finally, we have
+                  implemented our interpreter in Gofer, whose
+                  constructor classes provide just the added power
+                  over Haskell's type classes to allow precise and
+                  convenient expression of our ideas. This
+                  implementation includes a method for constructing
+                  extensible unions and a form of subtyping that is
+                  interesting in its own right.",
+}
+
+@InProceedings{	cartwright-extensible,
+  author	= "Robert Cartwright and Matthias Felleisen",
+  title		= "Extensible Denotational Language Specifications",
+  pages		= "244--272",
+  crossref	= "tacs1994",
+}
+
+@InProceedings{	hinze-deriving,
+  author	= "Ralf Hinze",
+  title		= "Deriving Backtracking Monad Transformers",
+  pages		= "186--197",
+  crossref	= "icfp2000",
+  abstract	= "In a paper about pretty printing J. Hughes introduced two fundamental techniques for deriving programs from their specification, where a specification consists of a signature and properties that the operations of the
+		  signature are required to satisfy. Briefly, the first technique, the term implementation, represents the operations by terms and works by defining a mapping from operations to observations---this mapping can be seen as
+		  defining a simple interpreter. The second, the context-passing implementation, represents operations as functions from their calling context to observations. We apply both techniques to derive a backtracking monad
+		  transformer that adds backtracking to an arbitrary monad. In addition to the usual backtracking operations---failure and nondeterministic choice---the Prolog cut and an operation for delimiting the effect of a cut are
+		  supported."
+}
+
+@Book{RWH,
+  title =       "Real world Haskell~-- code you can believe in",
+  author =      "Bryan O'Sullivan and John Goerzen and Don Stewart",
+  publisher =   "O'Reilly",
+  year =        "2008",
+  pages =       "1--710",
+}
+
+@InProceedings{	ddb,
+  author	= {Oleg Kiselyov and Shan, Chung-chieh and Amr Sabry},
+  title		= "Delimited Dynamic Binding",
+  pages		= "26--37",
+  crossref	= "icfp2006",
+}
+
+@Article{	carette-finally-jfp,
+  author	= "Jacques Carette and Oleg Kiselyov and Shan, Chung-chieh",
+  title		= "Finally Tagless, Partially Evaluated: Tagless Staged Interpreters for Simpler Typed Languages",
+  journal	= j_jfp,
+  year		= 2009,
+  volume	= 19,
+  number	= 5,
+  pages		= "509--543"
+}
+
+
+@inproceedings{Steele:1994:BIC:174675.178068,
+ author = {Steele,Jr., Guy L.},
+ title = {Building interpreters by composing monads},
+ pages		= "472--492",
+ crossref	= "popl1994",
+}
+
+@incollection{combining,
+  year={1993},
+  booktitle={Functional Programming, Glasgow 1992},
+  series={Workshops in Computing},
+  editor={Launchbury, John and Sansom, Patrick},
+  title={Combining Monads},
+  publisher={Springer London},
+  author={King, DavidJ. and Wadler, Philip},
+  pages={134-143}
+}
+
+@TechReport{steele-compose,
+  author = {Steele,Jr., Guy L.},
+  title =        {How to Compose Monads},
+  institution =  {Thinking Machines Corporation},
+  year =         1993,
+  address =   {Cambridge, Massachusetts},
+  month =     jul}
+
+@inproceedings{Wadler:1992:EFP:143165.143169,
+ author = {Wadler, Philip},
+ title = {The essence of functional programming},
+ booktitle = {POPL '92},
+ year = {1992},
+ location = {Albuquerque, New Mexico, USA},
+ pages = {1--14},
+ numpages = {14},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+
+@TechReport{moggi-abstract,
+  author =       {Eugenio Moggi},
+  title =        {An abstract view of programming languages},
+  institution =  {Edinburgh Univ.},
+  year =         1989,
+  number =    {ECS-LFCS-90-113}}
+
+@inproceedings{Moggi:1989:CLM:77350.77353,
+ author = {Moggi, E.},
+ title = {Computational lambda-calculus and monads},
+ booktitle = {LICS},
+ year = {1989},
+ pages = {14--23},
+ numpages = {10},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+} 
+@Comment booktitle = {Proceedings of the Fourth Annual Symposium on Logic in computer science},
+@Comment location = {Pacific Grove, California, USA},
+
+@article{Jaskelioff20104441,
+author = "Mauro Jaskelioff and Eugenio Moggi",
+title = "Monad transformers as monoid transformers ",
+journal = "Theor. Comp. Science ",
+volume = "411",
+number = "51/52",
+pages = "4441 -- 4466",
+year = "2010",
+keywords = "Monad",
+keywords = "Monoid",
+keywords = "Monoidal category "
+}
+@Comment note = "European Symposium on Programming 2009",
+
+@phdthesis{Espinosa:1995:SL:220613,
+ author = {Espinosa, David A.},
+ title = {Semantic Lego},
+ year = {1995},
+ note = {UMI Order No. GAX95-33546},
+ school = {Columbia University},
+ address = {New York, NY, USA},
+} 
+
+@Unpublished{espinosa-modular,
+  author =       {David Espinosa},
+  title =        {Modular denotational semantics},
+  note =         {Unpublished manuscript},
+  year =      1993}
+
+@Unpublished{espinosa-stratified,
+  author =       {David Espinosa},
+  title =        {Building interpreters by transforming stratified monads},
+  note =         {Unpublished manuscript},
+  year =      1994}
+
+@inproceedings{Filinski:1999:RLM:292540.292557,
+ author = {Filinski, Andrzej},
+ title = {Representing layered monads},
+ booktitle = {POPL '99},
+ year = {1999},
+ location = {San Antonio, Texas, USA},
+ pages = {175--188},
+ numpages = {14},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+@Comment booktitle = {Proceedings of the 26th ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
+@Comment series = {POPL '99},
+
+@inproceedings{Filinski:1994:RM:174675.178047,
+ author = {Filinski, Andrzej},
+ title = {Representing monads},
+ crossref	= "popl1994",
+ pages = {446--457},
+}
+
+@InProceedings{	luth-composing,
+  author	= "Christoph L{\"u}th and Neil Ghani",
+  title		= "Composing Monads Using Coproducts",
+  pages		= "133--144",
+  crossref	= "icfp2002",
+  abstract	= "Monads are a useful abstraction of computation, as they model diverse computational effects such as stateful computations, exceptions and I/O in a uniform manner. Their potential to provide both a modular semantics and a
+		  modular programming style was soon recognised. However, in general, monads proved difficult to compose and so research focused on special mechanisms for their composition such as distributive monads and monad
+		  transformers.We present a new approach to this problem which is general in that nearly all monads compose, mathematically elegant in using the standard categorical tools underpinning monads and computationally expressive
+		  in supporting a canonical recursion operator. In a nutshell, we propose that two monads should be composed by taking their \emph{coproduct}. Although abstractly this is a simple idea, the actual construction of the
+		  coproduct of two monads is non-trivial. We outline this construction, show how to implement the coproduct within Haskell and demonstrate its usage with a few examples. We also discuss its relationship with other ways of
+		  combining monads, in particular distributive laws for monads and monad transformers."
+}
+
+@inproceedings{Marlow06,
+  author    = {Simon Marlow},
+  title     = {An extensible dynamically-typed hierarchy of exceptions},
+  year      = {2006},
+  pages     = {96-106},
+  ee        = {http://doi.acm.org/10.1145/1159842.1159854},
+  crossref  = {haskell2006},
+}
+
+@inproceedings{HList,
+ author = {Kiselyov, Oleg and L\"{a}mmel, Ralf and Schupke, Keean},
+ title = {Strongly typed heterogeneous collections},
+ booktitle = {Proc. 2004 workshop on Haskell},
+ year = {2004},
+ location = {Snowbird, Utah, USA},
+ pages = {96--107},
+ numpages = {12},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {collections, dependently typed programming, extensible records, haskell, type equality, type improvement, type-indexed rows, type-safe database access},
+} 
+@Comment series = {Haskell '04},
+
+@inproceedings{Schrijvers-MZV,
+ author = {Schrijvers, Tom and Oliveira, Bruno C.d.S.},
+ title = {Monads, zippers and views: virtualizing the monad stack},
+ booktitle = {ICFP '11},
+ year = {2011},
+ location = {Tokyo, Japan},
+ pages = {32--44},
+ numpages = {13},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {components with side effects, modularity, monad transformers, zipper},
+} 
+@Comment booktitle = {Proceedings of the 16th ACM SIGPLAN international conference on Functional programming},
+@Comment series = {ICFP '11},
+
+@article{Swierstra:2008:DTL:1394794.1394795,
+ author = {Swierstra, Wouter},
+ title = {Data types \`a la carte},
+ journal = {J. Funct. Program.},
+ issue_date = {July 2008},
+ volume = {18},
+ number = {4},
+ month = jul,
+ year = {2008},
+ pages = {423--436},
+ numpages = {14},
+ publisher = {Cambridge University Press},
+ address = {New York, NY, USA},
+} 
+                  
+@inproceedings{Hughes:1995:DPL:647698.734154,
+ author = {Hughes, John},
+ title = {The Design of a Pretty-printing Library},
+ booktitle = {First Intl. Spring School on Adv. Functional Programming Techniques},
+ year = {1995},
+ pages = {53--96},
+ numpages = {44},
+ publisher = {Springer-Verlag},
+ address = {London, UK, UK},
+} 
+@Comment booktitle = {Advanced Functional Programming, First International Spring School on Advanced Functional Programming Techniques-Tutorial Text},
+ 
+@InProceedings{Shields-TIR,
+  author =      "Mark Shields and Erik Meijer",
+  title =       "Type-Indexed Rows",
+  address =     "London, United Kingdom",
+  month =       jan # " 17--19,",
+  pages =       "261--275",
+  crossref  = {popl2001},
+}
+
+@article{Hyland07combiningalgebraic,
+ author = {Hyland, Martin and Levy, Paul Blain and Plotkin, Gordon and Power, John},
+ title = {Combining algebraic effects with continuations},
+ journal = {Theor. Comput. Sci.},
+ issue_date = {April, 2007},
+ volume = {375},
+ number = {1-3},
+ month = apr,
+ year = {2007},
+ pages = {20--40},
+ numpages = {21},
+ publisher = {Elsevier Science Publishers Ltd.},
+ address = {Essex, UK},
+ keywords = {Computational effect, Lawvere theory, Modularity, Monad},
+} 
+
+  author	= {Oleg Kiselyov and Shan, Chung-chieh and Amr Sabry},
+  title		= "Delimited Dynamic Binding",
+  pages		= "26--37",
+  crossref	= "icfp2006",
+
+
+@inproceedings{brady-programmingandreasoning,
+ author = {Brady, Edwin C.},
+ title = {Programming and Reasoning with Algebraic Effects and Dependent Types},
+ pages = {To Appear},
+ crossref = "icfp2013",
+ } 
+
+@inproceedings{kammar-handlersinaction,
+ author = {Kammar, Ohad and Lindley, Sam and Oury, Nicolas},
+ title = {Handlers in action},
+ pages = {To Appear},
+ crossref = "icfp2013",
+ } 
+
+@inproceedings{Plotkin_handlersof,
+ author = {Plotkin, Gordon and Pretnar, Matija},
+ title = {Handlers of Algebraic Effects},
+ booktitle = {ESOP '09},
+ year = {2009},
+ location = {York, UK},
+ pages = {80--94},
+ numpages = {15},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+} 
+@Comment booktitle = {Proceedings of the 18th European Symposium on Programming Languages and Systems: Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2009},
+@Comment series = {ESOP '09},
+  
+@unpublished{eff-language,
+  author =       {Andrej Bauer and Matija Pretnar},
+  title =        {Programming with Algebraic Effects and Handlers},
+  note =         {arXiv:1203.1539 [cs.PL]},
+  year =      2012}
+
+@INPROCEEDINGS{swamy11monad,
+  TITLE = {Lightweight Monadic Programming in {ML}},
+  AUTHOR = {Nikhil Swamy and Nataliya Guts and Daan Leijen and Michael Hicks},
+  BOOKTITLE = {ICFP'11},
+  YEAR = 2011,
+  MONTH = SEP,
+  PAGES = {15--27},
+  HTTP = {http://research.microsoft.com/en-us/projects/coco/}
+}
+@Comment BOOKTITLE = {Proceedings of the {ACM} International Conference on Functional Programming (ICFP)},
+
+@unpublished{mcbride-frank,
+  author =       {Conor McBride},
+  title =        {The {F}rank Manual},
+  note =         {\url{https://personal.cis.strath.ac.uk/conor.mcbride/pub/Frank/}},
+  year =      2012}
+
+@online{control-effects,
+  author =       {Visscher, Sjoerd},
+  title =        {Control.Effects},
+  url =          {http://github.com/sjoerdvisscher/effects},
+  year =      2012}
+
+
+@inproceedings{daan-koka,
+  author = {Daan Leijen},
+  title = {Koka: A Language with Row-Polymorphic Effect Inference},
+  month = {September},
+  year = {2012},
+  booktitle = {1st Workshop on Higher-Order Programming with Effects (HOPE 2012)},
+  publisher = {ACM},
+}
+
+@inproceedings{sabry-yield,
+  author = {Roshan P. James and Amr Sabry},
+  title = {Yield: Mainstream Delimited Continuations},
+  month = {May},
+  year = {2011},
+  publication_type = {inproceedings},
+  booktitle = {Theory and Practice of Delimited Continuations Workshop},
+  publisher = {ACM},
+}
+
+% ------------------------------------------------------------------------
+% Only proceedings here
+
+@Proceedings{	popl1994,
+  key		= "{\relax POPL}",
+  title		= proc_popl_1 # "94"  # proc_popl_2,
+  booktitle	= proc_popl_1 # "94"  # proc_popl_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 1994,
+  location	= "Portland, OR"
+}
+
+@Proceedings{	popl1995,
+  key		= "{\relax POPL}",
+  title		= proc_popl_1 # "95"  # proc_popl_2,
+  booktitle	= proc_popl_1 # "95"  # proc_popl_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 1995,
+  location	= "San Francisco, CA"
+}
+
+@Proceedings{	popl2001,
+  key		= "{\relax POPL}",
+  title		= proc_popl_1 # "01"  # proc_popl_2,
+  booktitle	= proc_popl_1 # "01"  # proc_popl_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 2001,
+  location	= "London, UK"
+}
+
+@Proceedings{	tacs1994,
+  editor	= "Masami Hagiya and John C. Mitchell",
+  booktitle	= "Theor. Aspects of Comp. Soft.",
+  address	= pub_sv_addr,
+  publisher	= pub_sv,
+  year		= 1994,
+  number	= 789,
+  series	= "{LNCS}",
+  location	= "Sendai, Japan"
+}
+title		= "Theoretical Aspects of Computer Software: International Symposium",
+
+@Proceedings{	icfp2000,
+  key		= "{\relax ICFP}",
+  title		= proc_icfp_1 # "00"  # proc_icfp_2,
+  booktitle	= proc_icfp_1 # "00"  # proc_icfp_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 2000,
+  location	= montreal
+}
+
+@Proceedings{	icfp2002,
+  key		= "{\relax ICFP}",
+  title		= proc_icfp_1 # "02"  # proc_icfp_2,
+  booktitle	= proc_icfp_1 # "02"  # proc_icfp_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 2002,
+  location	= "Pittsburgh, PA"
+}
+
+@Proceedings{	icfp2006,
+  key		= "{\relax ICFP}",
+  title		= proc_icfp_1 # "06"  # proc_icfp_2,
+  booktitle	= proc_icfp_1 # "06"  # proc_icfp_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 2006,
+  location	= "Portland, OR"
+}
+
+@Proceedings{	icfp2013,
+  key		= "{\relax ICFP}",
+  title		= proc_icfp_1 # "13"  # proc_icfp_2,
+  booktitle	= proc_icfp_1 # "13"  # proc_icfp_2,
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 2013,
+  location	= "Boston, MA"
+}
+
+@Proceedings{	haskell2006,
+  title		= "Proc. 2006 {H}askell Workshop",
+  booktitle	= "Proc. 2006 {H}askell Workshop",
+  address	= pub_acm_addr,
+  publisher	= pub_acm,
+  year		= 2006,
+  location	= "Seattle, WA"
+}
+
+@inproceedings{Kiselyov:2013:EEA:2503778.2503791,
+ author = {Kiselyov, Oleg and Sabry, Amr and Swords, Cameron},
+ title = {Extensible Effects: An Alternative to Monad Transformers},
+ booktitle = {Proceedings of the 2013 ACM SIGPLAN Symposium on Haskell},
+ series = {Haskell '13},
+ year = {2013},
+ isbn = {978-1-4503-2383-3},
+ location = {Boston, Massachusetts, USA},
+ pages = {59--70},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2503778.2503791},
+ doi = {10.1145/2503778.2503791},
+ acmid = {2503791},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {coroutine, effect handler, effect interaction, monad, monad transformer, open union, type and effect system},
+} 
