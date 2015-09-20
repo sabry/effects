@@ -82,12 +82,20 @@ or the input and output streams. The evaluation of each program
 fragment either returns a value locally or propagates an effect to the
 central authority. The central authority performs the action specified
 by the effect and (typically) resumes the evaluation of the program
-fragment. Thus, assuming a fixed pervasive ability to communicate back
-and forth with a central authority allows each program fragment to
-have a uniform semantics irrespective of ambient effects. The handling
-of effects performed by individual program fragments \emph{and their
-  interactions} are all relegated to the central authority. 
+fragment. Thus, a fixed pervasive ability to communicate
+back-and-forth with a central authority allows each program fragment
+to have a uniform semantic interface irrespective of ambient effects
+as the handling of effects performed by individual program fragments
+\emph{and their interactions} are all relegated to the central
+authority.
 
+To realize this idea, Cartwright and Felleisen introduce
+\emph{language transformers} which map an interpreter for a base
+language to an interpreter for a larger language. The new interpreter
+introduces clauses for the new constructs and introduces a local
+administrator to handle the new effects: all other expressions and
+effects are relegated to either the base interpreter or to the central
+authority.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
