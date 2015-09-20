@@ -70,6 +70,26 @@ transformers~\cite{liang-interpreter} and their relationship.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Extensible Interpreters}
 
+In 1994, Cartwright and Felleisen~\cite{cartwright-extensible}
+introduced a new format for denotational language specifications
+called \emph{extended direct semantics}. This style of semantic
+specification supports the construction of interpreters for complete
+languages by composing interpreters for language fragments each
+responsible for a particular effect. In their original proposal, a
+complete program is associated with a \emph{central authority} that
+administers global resources affected by the program, e.g., the store
+or the input and output streams. The evaluation of each program
+fragment either returns a value locally or propagates an effect to the
+central authority. The central authority performs the action specified
+by the effect and (typically) resumes the evaluation of the program
+fragment. Thus, assuming a fixed pervasive ability to communicate back
+and forth with a central authority allows each program fragment to
+have a uniform semantics irrespective of ambient effects. The handling
+of effects performed by individual program fragments \emph{and their
+  interactions} are all relegated to the central authority. 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Monad Transformers}
 
